@@ -449,16 +449,16 @@ main {
 /* ------------------------------------ */
 /* ------------------------------------ */
 .search {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
   .search .wrapper {
     border: 2px solid #61a036;
     border-radius: 7px;
     display: flex;
     justify-content: space-between;
-    margin-top: 37px;
-    margin-bottom: 40px; }
+    margin: 37px 0 40px 0; }
     .search .wrapper input {
-      width: 642px;
       padding: 14px 23px;
       background: 0;
       border: 0;
@@ -492,13 +492,23 @@ main {
 /* ------------------------------------ */
 .intro {
   margin-bottom: 40px; }
-  .intro .wrapper .intro_block .intro_content {
-    width: 1440px;
-    height: 425px; }
-    .intro .wrapper .intro_block .intro_content .block {
-      width: 1440px;
-      height: 425px;
-      background-image: url(/img/intro.png); }
+  .intro .wrapper .swiper-container {
+    width: 100%;
+    height: 425px;
+    border-radius: 7px; }
+    .intro .wrapper .swiper-container .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
+    .intro .wrapper .swiper-container .swiper-button-next:after, .intro .wrapper .swiper-container .swiper-button-prev:after {
+      display: none; }
+    .intro .wrapper .swiper-container .swiper-button-next {
+      width: 40px;
+      height: 40px;
+      margin-right: 25px; }
+    .intro .wrapper .swiper-container .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      margin-left: 25px; }
 
 /* ------------------------------------ */
 /* ------------------------------------ */
@@ -581,62 +591,64 @@ main {
     justify-content: space-between; }
     .popular .wrapper .popular_blocks .popular_blk {
       width: 263px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-img {
+      .popular .wrapper .popular_blocks .popular_blk .popular_img {
         width: 260px;
         height: 230px;
-        border-radius: 10px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-country {
+        border-radius: 7px; }
+      .popular .wrapper .popular_blocks .popular_blk .popular_country {
         font-size: 18px;
         font-family: "Gotham" !important;
         font-weight: 500 !important;
         line-height: 17px;
         padding: 15px 0 15px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-title {
+      .popular .wrapper .popular_blocks .popular_blk .popular_title {
         font-size: 24px;
         font-family: "Gotham" !important;
         font-weight: 500 !important;
         line-height: 22px;
         padding-bottom: 15px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-sub-title {
+      .popular .wrapper .popular_blocks .popular_blk .popular_description {
         font-size: 18px;
         font-family: "Gotham" !important;
         font-weight: 400 !important;
         line-height: 17px;
-        padding-bottom: 20px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-availability {
+        margin-bottom: 15px; }
+      .popular .wrapper .popular_blocks .popular_blk .popular_availability {
         font-size: 16px;
         font-family: "Gotham" !important;
         font-weight: 400 !important;
         line-height: 15px;
-        padding-bottom: 30px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-availability-bold {
+        margin-bottom: 30px; }
+      .popular .wrapper .popular_blocks .popular_blk .popular_availability-bold {
         font-family: "Gotham" !important;
         font-weight: 700 !important; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-crossed-price {
+      .popular .wrapper .popular_blocks .popular_blk .popular_crossed-price {
         font-size: 18px;
         font-family: "Gotham" !important;
         font-weight: 400 !important;
         line-height: 17px;
         color: #818181;
-        text-decoration-line: line-through; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-price {
+        text-decoration-line: line-through;
+        padding-bottom: 10px; }
+      .popular .wrapper .popular_blocks .popular_blk .popular_price {
         font-size: 24px;
         font-family: "Gotham" !important;
         font-weight: 500 !important;
         line-height: 22px;
         padding-bottom: 15px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-price-little {
+      .popular .wrapper .popular_blocks .popular_blk .popular_price-little {
         font-size: 18px;
         line-height: 17px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-buy-minimum {
+      .popular .wrapper .popular_blocks .popular_blk .popular_buy-minimum {
         font-size: 16px;
         font-family: "Gotham" !important;
         font-weight: 400 !important;
         line-height: 15px;
         padding-bottom: 15px; }
-      .popular .wrapper .popular_blocks .popular_blk .popular-button {
-        width: 260px;
-        height: 50px;
+      .popular .wrapper .popular_blocks .popular_blk .popular_button {
+        width: 100%;
+        white-space: normal;
+        padding: 16px 20px;
         background-color: #61A036;
         border-radius: 7px;
         border: none;
@@ -698,8 +710,8 @@ main {
         width: 260px; }
         .advantages .wrapper .advantages_blocks .block img {
           margin: 0 0 13px 0;
-          width: 50px;
-          height: 50px; }
+          width: 53px;
+          height: 53px; }
         .advantages .wrapper .advantages_blocks .block p {
           font-size: 18px;
           line-height: 31px;
@@ -774,5 +786,282 @@ main {
 /* ------------------------------------ */
 /* ------------------------------------ */
 /* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------==========MEDIA=========------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+@media screen and (max-width: 1920px) {
+  .wrapper {
+    width: 75vw; }
+  .search {
+    width: 75vw;
+    margin: 0 auto; }
+    .search .wrapper {
+      border: 0.104vw solid #61a036;
+      border-radius: 0.365vw;
+      display: flex;
+      justify-content: space-between;
+      margin: 1.927vw 0 2.083vw 0; }
+      .search .wrapper input {
+        padding: 0.729vw 1.198vw;
+        background: 0;
+        border: 0;
+        width: 75vw;
+        font-family: "Roboto" !important;
+        font-weight: 400 !important;
+        font-size: 0.938vw;
+        line-height: 175%; }
+        .search .wrapper input::placeholder {
+          font-family: "Roboto" !important;
+          font-weight: 400 !important;
+          font-size: 0.938vw;
+          line-height: 175%;
+          color: #828282; }
+      .search .wrapper a {
+        background: #61a036;
+        min-width: 8.073vw;
+        padding: 0.677vw 2.344vw;
+        font-size: 0.938vw;
+        line-height: 175%;
+        color: #ffffff;
+        font-family: "Gotham" !important;
+        font-weight: 400 !important; }
+  .intro {
+    margin-bottom: 2.083vw; }
+    .intro .wrapper .swiper-container {
+      width: 75vw;
+      height: 22.135vw;
+      border-radius: 0.365vw; }
+      .intro .wrapper .swiper-container .swiper-wrapper {
+        width: 75%;
+        height: 100%; }
+      .intro .wrapper .swiper-container .swiper-button-next:after, .intro .wrapper .swiper-container .swiper-button-prev:after {
+        display: none; }
+      .intro .wrapper .swiper-container .swiper-button-next .img-next-prev, .intro .wrapper .swiper-container .swiper-button-prev .img-next-prev {
+        width: 2.083vw;
+        height: 2.083vw; }
+      .intro .wrapper .swiper-container .swiper-button-next {
+        width: 2.083vw;
+        height: 2.083vw; }
+      .intro .wrapper .swiper-container .swiper-button-prev {
+        width: 2.083vw;
+        height: 2.083vw; }
+  .categories {
+    width: 75vw;
+    margin: 0 auto; }
+    .categories .wrapper {
+      display: flex;
+      justify-content: center; }
+      .categories .wrapper .categories_blk {
+        width: 13.698vw;
+        padding: 0.417vw 1.615vw 1.094vw 1.615vw;
+        display: block;
+        border: 1px solid #d2d2d2;
+        box-sizing: border-box;
+        border-radius: 0.365vw;
+        margin-right: 1.615vw; }
+        .categories .wrapper .categories_blk:last-child {
+          margin-right: 0; }
+        .categories .wrapper .categories_blk .blk_img {
+          width: 10.417vw;
+          height: 8.438vw;
+          margin-bottom: 0.781vw; }
+        .categories .wrapper .categories_blk .blk_title {
+          text-align: center;
+          font-size: 1.250vw;
+          line-height: 1.458vw;
+          font-family: "Roboto" !important;
+          font-weight: 500 !important;
+          color: #333333; }
+  .welcome {
+    margin: 3.125vw 0 0 0; }
+    .welcome .wrapper {
+      display: flex;
+      flex-direction: column; }
+      .welcome .wrapper .welcome_title {
+        font-size: 2.500vw;
+        line-height: 2.344vw;
+        font-family: "Gotham" !important;
+        font-weight: 500 !important;
+        text-align: center;
+        padding: 0 0 1.563vw 0; }
+      .welcome .wrapper .welcome_sub-title p {
+        font-size: 0.938vw;
+        line-height: 1.615vw;
+        font-family: "Gotham" !important;
+        font-weight: 400 !important; }
+  .popular .wrapper {
+    display: flex;
+    flex-direction: column; }
+    .popular .wrapper .welcome_title {
+      font-size: 2.500vw;
+      line-height: 2.344vw;
+      font-family: "Gotham" !important;
+      font-weight: 500 !important;
+      text-align: center;
+      margin: 3.125vw 0 2.083vw 0; }
+    .popular .wrapper .popular_blocks {
+      display: flex;
+      justify-content: space-between; }
+      .popular .wrapper .popular_blocks .popular_blk {
+        width: 13.698vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_img {
+          width: 13.542vw;
+          height: 11.979vw;
+          border-radius: 0.365vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_country {
+          font-size: 0.938vw;
+          font-family: "Gotham" !important;
+          font-weight: 500 !important;
+          line-height: 0.885vw;
+          padding: 0.781vw 0 0.781vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_title {
+          font-size: 1.250vw;
+          font-family: "Gotham" !important;
+          font-weight: 500 !important;
+          line-height: 1.146vw;
+          padding-bottom: 0.781vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_description {
+          font-size: 0.938vw;
+          font-family: "Gotham" !important;
+          font-weight: 400 !important;
+          line-height: 0.885vw;
+          margin-bottom: 0.781vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_availability {
+          font-size: 0.833vw;
+          font-family: "Gotham" !important;
+          font-weight: 400 !important;
+          line-height: 0.781vw;
+          margin-bottom: 1.563vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_availability-bold {
+          font-family: "Gotham" !important;
+          font-weight: 700 !important; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_crossed-price {
+          font-size: 0.938vw;
+          font-family: "Gotham" !important;
+          font-weight: 400 !important;
+          line-height: 0.885vw;
+          color: #818181;
+          text-decoration-line: line-through;
+          padding-bottom: 0.521vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_price {
+          font-size: 1.250vw;
+          font-family: "Gotham" !important;
+          font-weight: 500 !important;
+          line-height: 1.146vw;
+          padding-bottom: 0.781vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_price-little {
+          font-size: 0.938vw;
+          line-height: 0.885vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_buy-minimum {
+          font-size: 0.833vw;
+          font-family: "Gotham" !important;
+          font-weight: 400 !important;
+          line-height: 0.781vw;
+          padding-bottom: 0.781vw; }
+        .popular .wrapper .popular_blocks .popular_blk .popular_button {
+          width: 100%;
+          white-space: normal;
+          padding: 0.833vw 1.042vw;
+          background-color: #61A036;
+          border-radius: 0.365vw;
+          border: none;
+          color: white;
+          font-size: 0.365vw;
+          font-family: "Gotham" !important;
+          font-weight: 400 !important;
+          line-height: 0.781vw; }
+    .popular .wrapper .popular_footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4.167vw; }
+      .popular .wrapper .popular_footer .popular-footer-p {
+        font-size: 0.938vw;
+        font-family: "Roboto" !important;
+        font-weight: 400 !important;
+        line-height: 1.094vw;
+        padding-bottom: 1.302vw; }
+      .popular .wrapper .popular_footer .popular-footer-button {
+        width: 11.719vw;
+        height: 2.604vw;
+        background-color: #61A036;
+        border-radius: 0.365vw;
+        border: none;
+        color: white;
+        font-size: 0.833vw;
+        font-family: "Gotham" !important;
+        font-weight: 400 !important;
+        line-height: 0.781vw; }
+  .advantages {
+    margin: 3.125vw 0 0 0; }
+    .advantages .wrapper {
+      display: flex;
+      flex-direction: column; }
+      .advantages .wrapper .advantages_blk h2 {
+        font-size: 2.500vw;
+        line-height: 2.344vw;
+        font-family: "Gotham" !important;
+        font-weight: 500 !important;
+        text-align: center;
+        margin: 0 0 2.344vw 0; }
+      .advantages .wrapper .advantages_blocks {
+        display: flex;
+        justify-content: space-between; }
+        .advantages .wrapper .advantages_blocks .block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 13.542vw; }
+          .advantages .wrapper .advantages_blocks .block img {
+            margin: 0 0 0.677vw 0;
+            width: 2.760vw;
+            height: 2.760vw; }
+          .advantages .wrapper .advantages_blocks .block p {
+            font-size: 0.938vw;
+            line-height: 1.615vw;
+            font-family: "Gotham" !important;
+            font-weight: 400 !important; } }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100vw; }
+  .search {
+    width: 100vw;
+    margin: 0 auto; }
+    .search .wrapper {
+      border: 0.104vw solid #61a036;
+      border-radius: 0.365vw;
+      display: flex;
+      justify-content: space-between;
+      margin: 1.927vw 0 2.083vw 0; }
+      .search .wrapper input {
+        padding: 0.729vw 1.198vw;
+        background: 0;
+        border: 0;
+        width: 90vw;
+        font-family: "Roboto" !important;
+        font-weight: 400 !important;
+        font-size: 0.938vw;
+        line-height: 175%; }
+        .search .wrapper input::placeholder {
+          font-family: "Roboto" !important;
+          font-weight: 400 !important;
+          font-size: 0.938vw;
+          line-height: 175%;
+          color: #828282; }
+      .search .wrapper a {
+        background: #61a036;
+        min-width: 8.073vw;
+        padding: 0.677vw 2.344vw;
+        font-size: 0.938vw;
+        line-height: 175%;
+        color: #ffffff;
+        font-family: "Gotham" !important;
+        font-weight: 400 !important; } }
 
 /*# sourceMappingURL=style.css.map */
